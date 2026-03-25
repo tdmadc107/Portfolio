@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors - Light base with vibrant accents */
+  --primary-dark: #faf9f6;       /* Warm white - primary background */
+  --primary-light: #f5f3f0;      /* Soft white - secondary background */
+  --accent-blue: #3b82f6;        /* Vibrant blue - primary accent */
+  --accent-purple: #8b5cf6;      /* Vibrant purple - secondary accent */
+  --accent-cyan: #06b6d4;        /* Vibrant cyan - tertiary accent */
+
+  /* Text Colors - Dark for contrast */
+  --text-primary: #1f2937;       /* Dark gray - primary text */
+  --text-secondary: #6b7280;     /* Medium gray - secondary text */
+  --text-muted: #9ca3af;         /* Light gray - muted text */
+
+  /* Background Colors - Light palette */
+  --bg-primary: #faf9f6;
+  --bg-secondary: #f5f3f0;
+  --bg-tertiary: #ede8e3;
+
+  /* Border Colors */
+  --border-color: #ddd5cc;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #faf9f6 0%, #f3f0eb 25%, #f0e8f5 50%, #e8f3f6 75%, #f5f0f3 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+html, body, #root {
+  height: 100%;
+}

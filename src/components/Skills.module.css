@@ -1,0 +1,193 @@
+.skillsSection {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(229, 231, 235, 0.3));
+  border-radius: 16px;
+  border: 1px solid rgba(219, 213, 204, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.skillsSectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 0;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skillCategory {
+  position: relative;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(243, 232, 255, 0.5));
+  border-radius: 12px;
+  border: 1.5px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skillCategory:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.skillCategory:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(219, 234, 254, 0.6));
+}
+
+.skillCategory:hover:before {
+  left: 100%;
+}
+
+.categoryTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.skillSubcategory {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.skillSubcategory:last-child {
+  margin-bottom: 0;
+}
+
+.subcategoryLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin: 0 0 var(--spacing-sm) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skillSubcategory:last-child {
+  margin-bottom: 0;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.skillTag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(34, 197, 94, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--text-primary);
+  border-radius: 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillTag:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.skillTag:hover {
+  color: white;
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.skillTag:hover:before {
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsSectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .skillCategory {
+    padding: var(--spacing-md);
+  }
+
+  .categoryTitle {
+    font-size: 1rem;
+  }
+
+  .skillTag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsSectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .categoryTitle {
+    font-size: 0.95rem;
+  }
+
+  .skillTags {
+    gap: 6px;
+  }
+}

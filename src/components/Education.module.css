@@ -1,0 +1,144 @@
+.education {
+  margin-bottom: var(--spacing-xl);
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  letter-spacing: -0.5px;
+}
+
+.iconEmoji {
+  color: unset;
+  font-size: 2.4rem;
+}
+
+.timeline {
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+  padding-left: 80px;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-secondary);
+  border: 3px solid var(--accent-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px var(--bg-primary);
+}
+
+.card {
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-purple);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--accent-cyan);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.school {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 600;
+}
+
+.period {
+  background: var(--bg-tertiary);
+  color: var(--accent-cyan);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.degree {
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin: 0;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 14px;
+  }
+
+  .timelineItem {
+    padding-left: 60px;
+  }
+
+  .marker {
+    width: 30px;
+    height: 30px;
+    left: -5px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .school {
+    font-size: 1.1rem;
+  }
+
+  .period {
+    width: fit-content;
+  }
+}

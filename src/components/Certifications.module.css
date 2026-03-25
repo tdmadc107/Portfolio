@@ -1,0 +1,135 @@
+.certifications {
+  margin-bottom: var(--spacing-xl);
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  letter-spacing: -0.5px;
+}
+
+.iconEmoji {
+  color: unset;
+  font-size: 2.4rem;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.certCard {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.certCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+}
+
+.certCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.3);
+  border-color: var(--accent-cyan);
+}
+
+.icon {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.issuer {
+  color: var(--accent-purple);
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  font-size: 0.85rem;
+}
+
+.issueDate,
+.expiryDate {
+  color: var(--text-secondary);
+}
+
+.issueDate {
+  color: var(--accent-cyan);
+}
+
+.expiryDate {
+  color: var(--accent-blue);
+}
+
+.credentialId {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin: 0;
+  word-break: break-all;
+}
+
+.link {
+  display: inline-block;
+  margin-top: auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.link:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .certCard {
+    padding: var(--spacing-md);
+  }
+
+  .name {
+    font-size: 1.05rem;
+  }
+}
