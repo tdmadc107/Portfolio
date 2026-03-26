@@ -1,5 +1,12 @@
 .certifications {
   margin-bottom: var(--spacing-xl);
+  scroll-margin-top: 160px;
+}
+
+@media (max-width: 768px) {
+  .certifications {
+    scroll-margin-top: 240px;
+  }
 }
 
 .heading {
