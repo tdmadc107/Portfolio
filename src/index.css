@@ -49,3 +49,14 @@ body {
 html, body, #root {
   height: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+}

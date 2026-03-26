@@ -11,7 +11,6 @@ interface ExperienceItem {
 }
 
 const Experience: React.FC = () => {
-  // TODO: Update your work experience
   const experienceData: ExperienceItem[] = [
     {
       company: 'FPT Software',
