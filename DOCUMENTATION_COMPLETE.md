@@ -178,6 +178,20 @@ d:\Project\Portfolio/
 
 **File**: `src/components/Header.tsx`
 
+**Tính năng**:
+- 📱 **Responsive Dropdown Menu** - Ở chế độ mobile, header sẽ collapse thành dropdown menu hamburger khi scroll
+- 💻 **Desktop Unchanged** - Ở desktop, header giữ nguyên layout ban đầu
+- ✨ **Smooth Animations** - Subtitle fade out, header collapse, hamburger animation
+
+**Cách hoạt động**:
+- Ở đầu trang: Header hiển thị bình thường với logo, subtitle, và navigation
+- Khi scroll down (mobile ≤768px): 
+  - Header thu gọn (padding giảm)
+  - Subtitle ẩn đi (fade out)
+  - Navigation chuyển thành hamburger button (3 dòng)
+  - Click hamburger để mở dropdown menu
+- Ở desktop (≥769px): Không có thay đổi gì
+
 ```typescript
 // TODO: Thay tên của bạn
 <h1>Nguyễn Văn A</h1>
@@ -798,6 +812,20 @@ d:\Project\Portfolio/
 ### Header Component
 
 **File**: `src/components/Header.tsx`
+
+**Features**:
+- 📱 **Responsive Dropdown Menu** - On mobile, header collapses to hamburger dropdown menu when scrolling
+- 💻 **Desktop Unchanged** - On desktop, header keeps original layout
+- ✨ **Smooth Animations** - Subtitle fade out, header collapse, hamburger animation
+
+**How it works**:
+- At top of page: Header displays normally with logo, subtitle, and navigation links
+- When scrolling down (mobile ≤768px):
+  - Header compacts (reduced padding)
+  - Subtitle fades out
+  - Navigation becomes hamburger button (3 lines)
+  - Click hamburger to open dropdown menu
+- On desktop (≥769px): No changes
 
 ```typescript
 // TODO: Update your name
