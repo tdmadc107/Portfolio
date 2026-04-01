@@ -486,29 +486,6 @@ export const ExperienceSection = () => {
 }
 ```
 
-### 🎨 Color Schemes Gợi Ý
-
-**1. Cool Blue (Xanh Lạnh)**
-```css
---primary-color: #007bff;
---accent-blue: #0dcaf0;
---accent-cyan: #0d6efd;
-```
-
-**2. Sunset (Hoàng Hôn)**
-```css
---primary-color: #ff6b6b;
---accent-purple: #ee5a6f;
---accent-blue: #ffa94d;
-```
-
-**3. Forest Green (Xanh Rừng)**
-```css
---primary-color: #10b981;
---accent-cyan: #14b8a6;
---accent-blue: #06b6d4;
-```
-
 ### 📐 Khoảng Cách (Spacing)
 
 ```css
@@ -588,43 +565,26 @@ Mỗi component có file `*.module.css` riêng với pattern:
 
 ## Deploy
 
-### 🌐 Deployment Options
+### 🚀 Vercel (Recommended) - Production Build
 
-#### 1️⃣ Vercel (Recommended)
-
+**Build Command**:
 ```bash
-# Cài Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
+npm run build
 ```
 
-✅ **Lợi ích**:
-- Zero-config deployment
-- Automatic scaling
-- Preview URLs
+**Deploy to Production**:
+```bash
+vercel deploy --prod
+```
 
-#### 2️⃣ Netlify
-
+**Deploy Steps**:
 1. Push code lên GitHub
-2. Vào https://netlify.com
-3. Kết nối GitHub repo
-4. Auto-deploy trên push
+2. Vào https://vercel.com/new
+3. Import GitHub repository
+4. Vercel auto-detect build config
+5. Auto-deploy trên mỗi push
 
-#### 3️⃣ GitHub Pages
-
-```bash
-npm run build
-# Push dist/ folder lên gh-pages branch
-```
-
-#### 4️⃣ Hosting Truyền Thống
-
-```bash
-npm run build
-# Upload dist/ folder via FTP
-```
+✅ **Lợi ích**: Zero-config, Auto-scaling, Preview URLs, Free tier
 
 ---
 
@@ -633,10 +593,9 @@ npm run build
 - [ ] Tất cả TODO comments đã cập nhật
 - [ ] Test trên mobile (F12 → Ctrl+Shift+M)
 - [ ] Kiểm tra tất cả links hoạt động
-- [ ] Update favicon
-- [ ] Update meta tags (Open Graph)
 - [ ] Run build: `npm run build`
 - [ ] Test production build: `npm run preview`
+- [ ] Deploy: `vercel deploy --prod`
 
 ---
 
@@ -649,9 +608,7 @@ npm run build
 3. [Project Structure](#project-structure-en)
 4. [Customization Guide](#customization-guide-en)
 5. [Data Management](#data-management-en)
-6. [UI Customization](#ui-customization-en)
-7. [Components Reference](#components-reference-en)
-8. [Deployment](#deployment-en)
+6. [Deployment](#deployment-en)
 
 ---
 
@@ -1121,29 +1078,6 @@ export const ExperienceSection = () => {
 }
 ```
 
-### 🎨 Color Schemes
-
-**1. Cool Blue**
-```css
---primary-color: #007bff;
---accent-blue: #0dcaf0;
---accent-cyan: #0d6efd;
-```
-
-**2. Sunset**
-```css
---primary-color: #ff6b6b;
---accent-purple: #ee5a6f;
---accent-blue: #ffa94d;
-```
-
-**3. Forest Green**
-```css
---primary-color: #10b981;
---accent-cyan: #14b8a6;
---accent-blue: #06b6d4;
-```
-
 ### 📐 Spacing
 
 ```css
@@ -1185,259 +1119,65 @@ Dark mode is automatically supported via `prefers-color-scheme`:
 
 ---
 
-## Components Reference (EN)
-
-### Component Overview
-
-| Component | Purpose | Props | Notes |
-|-----------|---------|-------|-------|
-| **Header** | Navigation | ❌ None | Sticky header |
-| **Personal** | Contact Info | ❌ None | Avatar + Info |
-| **Education** | Education Timeline | ❌ None | Vertical timeline |
-| **Experience** | Work History | ❌ None | Company cards |
-| **Certifications** | Certificates | ❌ None | Grid layout |
-| **Achievements** | Accomplishments | ❌ None | Achievement cards |
-| **Footer** | Footer | ❌ None | Contact & links |
-
-### CSS Modules Pattern
-
-Each component has its own `*.module.css`:
-
-```typescript
-// Header.tsx
-import styles from './Header.module.css';
-
-export const Header = () => {
-  return <header className={styles.header}>...</header>;
-};
-```
-
-**Benefits**:
-- ✅ No CSS conflicts
-- ✅ Scoped class names
-- ✅ Easy to maintain
-- ✅ Type-safe imports
-
----
-
 ## Deployment (EN)
 
-### 🌐 Deployment Options
+### 🚀 Vercel (Recommended) - Production Build
 
-#### 1️⃣ Vercel (Recommended)
-
+**Build Command**:
 ```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
+npm run build
 ```
 
-✅ **Benefits**:
-- Zero-config deployment
-- Automatic scaling
-- Built-in analytics
-- Preview URLs
-- Free tier available
+**Deploy to Production**:
+```bash
+vercel deploy --prod
+```
 
-#### 2️⃣ Netlify
-
+**Deploy Steps**:
 1. Push code to GitHub
-2. Go to https://netlify.com
-3. Connect GitHub repo
-4. Auto-deploy on push
+2. Go to https://vercel.com/new
+3. Import GitHub repository  
+4. Vercel auto-detect build config
+5. Auto-deploy on every push
 
-#### 3️⃣ GitHub Pages
-
-```bash
-npm run build
-# Upload dist/ folder to gh-pages branch
-```
-
-#### 4️⃣ Traditional Hosting
-
-```bash
-npm run build
-# Upload dist/ folder via FTP
-```
+✅ **Benefits**: Zero-config, Auto-scaling, Preview URLs, Free tier
 
 ---
 
-### 📝 Pre-Deployment Checklist
+### ✅ Pre-Deployment Checklist
 
 - [ ] All TODO comments updated
 - [ ] Mobile testing done (F12 → Ctrl+Shift+M)
 - [ ] All links working
-- [ ] Favicon updated
-- [ ] Meta tags updated
 - [ ] Production build tested: `npm run preview`
 - [ ] No console errors
-- [ ] Images optimized
-- [ ] Performance checked
+- [ ] Deploy: `vercel deploy --prod`
 
 ---
 
-## Tech Stack
+## Quick Reference
 
-```json
-{
-  "framework": "React 18",
-  "language": "TypeScript 5",
-  "styling": "CSS Modules",
-  "builder": "Vite 4",
-  "package-manager": "npm"
-}
-```
-
-## Dependencies
-
-```json
-{
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0"
-}
-```
-
-## DevDependencies
-
-```json
-{
-  "@types/react": "^18.2.0",
-  "@types/react-dom": "^18.2.0",
-  "@vitejs/plugin-react": "^4.0.0",
-  "typescript": "^5.0.0",
-  "vite": "^4.0.0"
-}
-```
-
----
-
-## Scripts
+### 📝 Essential Commands
 
 ```bash
-# Development
-npm run dev              # Start dev server
-
-# Production
-npm run build            # Build for production
-npm run preview          # Preview production build
-
-# Code Quality
-npm run lint            # Run linter (if configured)
-npm run type-check      # TypeScript type checking
+npm install              # Install dependencies
+npm run dev             # Development server
+npm run build           # Production build
+npm run preview         # Preview production build
+vercel deploy --prod    # Deploy to production
 ```
 
----
+### 🔧 Common Issues
 
-## Responsive Design
-
-Website is optimized for:
-
-- 📱 Mobile (320px+)
-- 📱 Tablet (768px+)
-- 🖥️ Desktop (1024px+)
-- 🖥️ Wide (1440px+)
-
-All components use flexbox and CSS Grid for responsive layouts.
-
----
-
-## Browser Support
-
-- ✅ Chrome/Edge (Latest)
-- ✅ Firefox (Latest)
-- ✅ Safari (Latest)
-- ✅ Mobile browsers
-
----
-
-## Performance Tips
-
-1. **Images**: Optimize before uploading
-   - Use tools like TinyPNG, ImageOptim
-   - Use modern formats (WebP if possible)
-
-2. **Code Splitting**: Vite handles automatically
-
-3. **CSS**: 
-   - CSS Modules scope styles
-   - No unused CSS shipped
-
-4. **Builds**: 
-   - Production build: `npm run build`
-   - Check with: `npm run preview`
-
----
-
-## Troubleshooting
-
-### Port 3000 already in use?
-```bash
-npm run dev -- --port 3001
-```
-
-### Styles not applying?
-- Check CSS module import
-- Verify class names match
-- Restart dev server
-
-### Build errors?
-```bash
-rm -rf node_modules package-lock.json
-npm install
-npm run build
-```
-
-### TypeScript errors?
-- Update `tsconfig.json`
-- Check type definitions
-- Verify import paths
-
----
-
-## Contributing & Support
-
-- 📖 Full documentation included
-- 💬 Comments in code
-- 🔍 Search for `TODO` to find customization points
-- 📧 Update contact info in Footer
+- **Port in use**: `npm run dev -- --port 3001`
+- **Build fails**: Run `npm install` again
+- **Styles missing**: Check CSS module case sensitivity
 
 ---
 
 ## License
 
 This project is for personal use. Feel free to customize and deploy!
-
----
-
-## Additional Resources
-
-### Documentation
-- [React Docs](https://react.dev)
-- [TypeScript Docs](https://www.typescriptlang.org)
-- [Vite Docs](https://vitejs.dev)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-
-### Tools
-- [Cloudinary](https://cloudinary.com) - Image hosting
-- [Vercel](https://vercel.com) - Deployment
-- [Netlify](https://netlify.com) - Deployment
-- [GitHub Pages](https://pages.github.com) - Free hosting
-
-### Learning
-- [Google Fonts](https://fonts.google.com) - Typography
-- [Color Hunt](https://colorhunt.co) - Color palettes
-- [Unsplash](https://unsplash.com) - Free images
-- [Pexels](https://pexels.com) - Free images
-
----
-
-## Good Luck! 🚀
-
-You now have a complete, professional portfolio website. Customize it with your information and share it with the world!
-
-**Happy coding!** 💻✨
 
 ---
 
