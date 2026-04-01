@@ -25,11 +25,12 @@
 }
 
 .logo {
-  flex: 0;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;
@@ -37,10 +38,13 @@
   background-clip: text;
   margin-bottom: var(--spacing-xs);
   transition: font-size 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .logo h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;
@@ -48,15 +52,21 @@
   background-clip: text;
   margin-bottom: var(--spacing-xs);
   transition: font-size 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .logo p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   letter-spacing: 0.5px;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  max-height: 1.5rem;
+  max-height: 1.2rem;
   opacity: 1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .subtitleHidden {
@@ -122,7 +132,7 @@
 }
 
 .menuButtonActive span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(4px, 4px);
 }
 
 .menuButtonActive span:nth-child(2) {
@@ -130,16 +140,16 @@
 }
 
 .menuButtonActive span:nth-child(3) {
-  transform: rotate(-45deg) translate(10px, -10px);
+  transform: rotate(-45deg) translate(7px, -8px);
 }
 
 @media (max-width: 768px) {
   .nav {
     position: relative;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 0;
+    gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-lg);
   }
 
@@ -153,17 +163,19 @@
   }
 
   .logo h1 {
-    font-size: 1.3rem;
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
   }
 
   .title {
-    font-size: 1.3rem;
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
   }
 
   .logo p {
-    display: none;
+    display: block;
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
   }
 
   .subtitleHidden {
@@ -171,7 +183,7 @@
   }
 
   .menuButton {
-    display: none;
+    display: flex;
     order: 2;
   }
 
@@ -190,15 +202,19 @@
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     border-bottom: 1px solid var(--border-color);
     padding: 0;
-    max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: opacity, transform;
   }
 
   .navLinksOpen {
-    max-height: 400px;
     opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
   }
 
   .navLinks li {
