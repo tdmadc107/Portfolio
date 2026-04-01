@@ -171,8 +171,12 @@
   }
 
   .menuButton {
-    display: flex;
+    display: none;
     order: 2;
+  }
+
+  .headerScrolled .menuButton {
+    display: flex;
   }
 
   .navLinks {
